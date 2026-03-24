@@ -5,6 +5,7 @@ def fib(n):
     return fib(n-1)+fib(n-2)
 n=int(input("enter the number"))
 print(fib(n))
+
 # without recursion function
 def fib(n):
     if n <= 1:
