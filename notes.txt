@@ -1,3 +1,11 @@
-24/04/2026
+23/03/2026
+leecode:-
+problem:- pibonacci number(509), climbingstairs(70)
+class:- factorial problem and program 
+pibonacci number(509):- f(n)=f(n-1)+f(n-2)
+    Fibonacci numbers are a sequence where each number is the sum of the two preceding ones
+    Eg:- 0,1,1,2,3,4
+         0+1=1,1+1=2,1+2=3
+24/03/2026
 dynamic programming :-
-in recursion solution indentifing the overlapping subproblems and storing them in on array to reduce time 
+in recursion solution indentifing the overlapping subproblems and storing them in on array to reduce time or multiple recursive call count  
