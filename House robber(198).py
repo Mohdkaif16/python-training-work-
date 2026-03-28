@@ -1,13 +1,13 @@
 # using temp veriable for storage 
 class Solution:
     def rob(self, nums):
-        prev = 0   
-        curr = 0   
+        p = 0   
+        c = 0   
         for n in nums:
-            temp = curr              
-            curr = max(curr, prev + n)  
-            prev = temp              
-        return curr 
+            temp = c              
+            c = max(c, p + n)  
+            p = temp              
+        return c 
 # without using temp veriable 
 class Solution:
     def rob(self, nums):
