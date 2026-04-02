@@ -16,6 +16,7 @@ problem number
 322-coin change
 2787-take+=skipe
 78-subset
+90-subsets2
 problem 78-subset
 if set is [1,2,3] then subsets are {[],[1],[2],[3],[1,2],[2,3][1,3],[1,2,3]}
 steps-
@@ -25,6 +26,7 @@ steps-
       - Keep it as it is
       - Add current element to it
 4. Return all
+
 Pseudocode with recursion-
 FUNCTION subsets(nums):
     IF nums is empty:
@@ -35,3 +37,29 @@ FUNCTION subsets(nums):
         ADD list to output
         ADD (first element + list) to output
     RETURN output
+problem 90-subsets2
+steps-
+1. Sort the array
+2. Generate all subsets (recursion)
+3. Duplicates will appear
+4. Remove duplicates
+5. Return final answer
+
+Pseudocode with recursion-
+FUNCTION subsetsWithDup(nums):
+    SORT nums
+    FUNCTION solve(nums):
+        IF nums is empty:
+            RETURN [[]]
+        small = solve(nums without first element)
+        ans = empty list
+        FOR each list in small:
+            ADD list to ans
+            ADD (first element + list) to ans
+        RETURN ans
+    result = solve(nums)
+    final = empty list
+    FOR each subset in result:
+        IF subset not in final:
+            ADD subset to final
+    RETURN final
