@@ -6,6 +6,7 @@ pibonacci number(509):- f(n)=f(n-1)+f(n-2)
     Fibonacci numbers are a sequence where each number is the sum of the two preceding ones
     Eg:- 0,1,1,2,3,4
          0+1=1,1+1=2,1+2=3
+
 24/03/2026
 dynamic programming :-
 in recursion solution indentifing the overlapping subproblems and storing them in on array to reduce time or multiple recursive call count  
@@ -15,3 +16,22 @@ problem number
 322-coin change
 2787-take+=skipe
 78-subset
+problem 78-subset
+if set is [1,2,3] then subsets are {[],[1],[2],[3],[1,2],[2,3][1,3],[1,2,3]}
+steps-
+1. Break problem into smaller part
+2. Get subsets of remaining elements
+3. For each subset:
+      - Keep it as it is
+      - Add current element to it
+4. Return all
+Pseudocode with recursion-
+FUNCTION subsets(nums):
+    IF nums is empty:
+        RETURN [[]]
+    smallOutput = subsets(nums without first element)
+    output = empty list
+    FOR each list in smallOutput:
+        ADD list to output
+        ADD (first element + list) to output
+    RETURN output
