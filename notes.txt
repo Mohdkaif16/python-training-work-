@@ -9,3 +9,9 @@ pibonacci number(509):- f(n)=f(n-1)+f(n-2)
 24/03/2026
 dynamic programming :-
 in recursion solution indentifing the overlapping subproblems and storing them in on array to reduce time or multiple recursive call count  
+
+02/04/2026
+problem number
+322-coin change
+2787-take+=skipe
+78-subset
