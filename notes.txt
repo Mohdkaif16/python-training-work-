@@ -65,3 +65,31 @@ FUNCTION subsetsWithDup(nums):
         IF subset not in final:
             ADD subset to final
     RETURN final
+13/04/2026
+binary tree introduction 
+binary tree: almost [0,1,2] child 
+binary tree Node class,data,left,right
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
+print binary tree recursivly 
+def printTree(root):
+    if root is None:
+        return
+
+    print(root.data)
+    printTree(root.left)
+    printTree(root.right)
+input of binary tree recursively 
+def createTree():
+    data = int(input())
+
+    if data == -1:
+        return None
+
+    root = Node(data)
+    root.left = createTree()
+    root.right = createTree()
+    return root
