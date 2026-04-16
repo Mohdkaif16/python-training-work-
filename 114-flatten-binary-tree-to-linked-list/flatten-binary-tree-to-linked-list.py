@@ -6,13 +6,14 @@
 #         self.right = right
 class Solution:
     def flatten(self, root):
-        self.prev = None
-        def dfs(node):
-            if not node:
-                return
-            dfs(node.right)
-            dfs(node.left)
-            node.right = self.prev
-            node.left = None
-            self.prev = node
-        dfs(root)
+        curr = root
+        while curr:
+            if curr.left:
+                prev = curr.left
+                while prev.right:
+                    prev = prev.right
+                prev.right = curr.right
+                curr.right = curr.left
+                curr.left = None
+            curr = curr.right
+        
